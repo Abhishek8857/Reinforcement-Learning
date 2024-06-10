@@ -1,2 +1,4 @@
 # Reinforcement-Learning
-Implementation of Reinforcement learning algorithms
+Reinforcement learning methods and algorithms
+
+Implementation of most common RL Algorithms
