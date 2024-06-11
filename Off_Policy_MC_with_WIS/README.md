@@ -4,4 +4,4 @@ With Q-learning, we've seen an off-policy TD method. Off-policy methods can be h
 Importance sampling is a method that allows us to compute the value function of a policy using samples from another policy
 
 # Credits
-Custom environments,and rednering functions provided by DSME RWTH Aachen
+Custom environments,and rendering functions provided by DSME RWTH Aachen
