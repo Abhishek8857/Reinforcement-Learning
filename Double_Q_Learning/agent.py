@@ -9,7 +9,7 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 class Agent:
-    def __init__(self, env, gamma=1.0, learning_rate=0.05, epsilon=0.1):
+    def __init__(self, env, gamma=1.0, learning_rate=0.1, epsilon=0.1):
         """ Initializes the environment and defines dynamics."""
         self.env = env
         self.gamma = gamma
