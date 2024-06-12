@@ -79,4 +79,4 @@ def plot_action_value(self, q_fn, q_label, epoch):
         y = [0, lines]
         plt.plot(x,y, color='black')
     
-    plt.show()
+    plt.savefig(f"SARSA/{q_label}_epoch_{epoch}.png")

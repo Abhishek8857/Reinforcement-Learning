@@ -75,4 +75,4 @@ def plot_action_value(self):
         x = [i, i]
         y = [0, lines]
         plt.plot(x,y, color='black')
-    plt.show()
+    plt.savefig(f"Off_Policy_MC_with_WIS/Final_Q_Function.png")
