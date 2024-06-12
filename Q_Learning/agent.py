@@ -58,6 +58,7 @@ class Agent:
         """ Trains the agent with the q algorithm.
         Args: 
         num_episodes: Number of episodes used until training stops"""
+        
         for i in range(num_episodes + 1):
             state, info = self.env.reset()
             converged = False
@@ -81,7 +82,7 @@ class Agent:
             file: File used for storing the video.
             num_runs: Number of runs displayed
         Returns:
-            done: Info about whether the last run is done.
+            converged: Info about whether the last run is done.
             reward: The reward the agent gathered in the last step.
         """
         
@@ -97,6 +98,7 @@ class Agent:
             while not converged:
                 action = self.get_best_action(state, self.q)
                 next_state, reward, converged, truncated, info = env.step(action)
+                
                 state=next_state
                 
                 out = env.render()

@@ -85,7 +85,7 @@ class Agent:
             file: File used for storing the video.
             num_runs: Number of runs displayed
         Returns:
-            done: Info about whether the last run is done.
+            converged: Info about whether the last run is done.
             reward: The reward the agent gathered in the last step.
         """
         
@@ -101,6 +101,7 @@ class Agent:
             while not converged:
                 combined_q = self.q_1 + self.q_2
                 action = self.get_best_action(state, combined_q)
+                
                 next_state, reward, converged, truncated, info = env.step(action)
                 state = next_state
                 
@@ -121,8 +122,8 @@ class Agent:
             anim.save(file, writer="ffmpeg", fps=5)
             
         return converged, reward
-
-
+    
+    
 
 setattr(Agent, 'visualize', visualize)
 setattr(Agent, 'plot_action_value', plot_action_value)
