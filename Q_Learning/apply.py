@@ -26,7 +26,7 @@ def run():
     # Visualise the agent and save the video file generated
     final_agent.visualize(training_runs)
     video = "Q_Learning/final_run.mp4"
-    final_agent.evaluate(env, video, num_runs=1)
+    print(final_agent.evaluate(env, video, num_runs=1))
     
     return total_time
 
